@@ -1,0 +1,28 @@
+.overlay {
+    position:fixed;
+    display:none;
+}
+.customPopup {
+    position:fixed;
+    display:none;
+    transform: translate(-50%,-50%);
+    background-color:rgb(0,0,0);
+    color:black;
+    color-scheme: light dark;
+}
+#closeCust {
+    width: 120px;
+    height: 120px;
+
+}
+#openCust {
+    width: 120px;
+    height: 120px;
+}
+.output {
+display:flex;
+flex-wrap:wrap;
+}
+.output > div {
+flex:1;
+}
