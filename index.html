@@ -2,18 +2,22 @@
 <html>
     <head>
         <meta>
-        <link>
-        <script></script>
+        <link rel = "stylesheet" href = "index.css">
+        <script src = "search.js"></script>
+        <script src = "webChange.js"></script>
     </head>
     <body>
-        <div class = "overlay">
-            
-        </div>
-        <div class = "customPopup">
+        <div id = "overlay">
+        <div id = "customPopup">
           <p>Custom popup</p>  
+          <button id = "closeCust" onclick = "clsAlert()" class = "closePopup">Close</button>
         </div>
-        <label></label>
-        <input>
+    </div>
+        <label for = "searchSub">Look for students</label>
+        <input id = "searchSub" name = "searchSubmission" class = "searchSub">
+        <button id = "openCust" onclick = "opnAlert(), search()">Submit</button>
+    <div contenteditable="true" id = "output" name = "res">
 
+    </div>
     </body>
 </html>

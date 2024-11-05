@@ -2,9 +2,10 @@
     position:fixed;
     display:none;
 }
+
 .customPopup {
-    position:fixed;
     display:none;
+    position:fixed;
     transform: translate(-50%,-50%);
     background-color:rgb(0,0,0);
     color:black;
@@ -12,16 +13,20 @@
 }
 #closeCust {
     width: 120px;
-    height: 120px;
+    height: 30px;
+
 
 }
 #openCust {
     width: 120px;
-    height: 120px;
+    height: 30px;
 }
 .output {
 display:flex;
 flex-wrap:wrap;
+border-width: 0px;
+outline-style: none;
+
 }
 .output > div {
 flex:1;
