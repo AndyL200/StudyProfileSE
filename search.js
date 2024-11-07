@@ -1,9 +1,4 @@
 
-
-
-
-
-
 const clsAlert = function() {
     document.getElementById("customAlert").style.display = "none";
     document.getElementById("overlay").style.display = "none";
