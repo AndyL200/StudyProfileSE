@@ -1,23 +1,40 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <meta>
-        <link rel = "stylesheet" href = "index.css">
+        <meta charset = 'utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Find Students</title>
+        <link href = "stickfav.jpeg" rel = "icon">
+        <link href = "index.css" rel = "stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"> 
         <script src = "search.js"></script>
         <script src = "webChange.js"></script>
     </head>
     <body>
-        <div id = "overlay">
+        <!-- <div id = "overlay">
         <div id = "customPopup">
           <p>Custom popup</p>  
           <button id = "closeCust" onclick = "clsAlert()" class = "closePopup">Close</button>
         </div>
-    </div>
-        <label for = "searchSub">Look for students</label>
+    </div> -->
+    <div class = 'topSearch'>
+        <svg height = "20" width = "20">
+            <circle r = "5" cx = "10" cy = "10"  stroke-width = "2" fill = "none" stroke = "black"/>
+            <line x1 = "15" x2 = "20" y1 = "15" y2 = "20" style="stroke:red;stroke-width:2"/>
+        </svg>
         <input id = "searchSub" name = "searchSubmission" class = "searchSub">
-        <button id = "openCust" onclick = "opnAlert(), search()">Submit</button>
-    <div contenteditable="true" id = "output" name = "res">
+        
+        </div>
+
+    <div class = "D-block"></div>
+
+
+
+    <div id = "output" name = "res">
 
     </div>
+    <hr>
     </body>
 </html>
