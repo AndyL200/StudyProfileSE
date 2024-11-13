@@ -5,7 +5,24 @@ document.addEventListener('DOMContentLoaded', ()=>{
         searchInput();
         console.log("Enter");
     }
-})
+});
+
+
+async function fullHeight() {
+    let documentHeight = await document.body.scrollHeight;
+    let DHeight = document.getElementById('D');
+    console.log(documentHeight);
+    if(await DHeight) {
+    document.body.style.height = documentHeight + 'px';
+    DHeight.style.height = (documentHeight*0.90) + 'px';
+}
+else {
+console.error("DHeight Error");
+}
+}
+
+
+fullHeight();
 
 
 
@@ -49,7 +66,7 @@ const search = function(req) {
                 // console.log(req[max]);
                 // console.log(data[i].name[max]);
 
-            if(req[max] == data[i].name[max]) {
+            if(req[max] == data[i].name[max] || req.length == 0) {
             console.log(data[i].name[n]);
             let contain = document.createElement('div');
             let curr = document.createElement("a");
@@ -57,13 +74,8 @@ const search = function(req) {
             contain.className = "studentOutput";
             curr.href="page1.html";
  
-            const circle = document.createElementNS("http://www.w3.org/2000/svg", 'circle');
-            circle.classList = "circle";
-            let circ = document.createElementNS("http://www.w3.org/2000/svg",'svg');
-            circ.appendChild(circle);
-           
-
-
+            let circ = document.createElement('div');
+            circ.className = "circle";
 
             curr.innerHTML = `${data[i].name} ${data[i].Tnumber} ${data[i].email} ${data[i].degree}`;
             contain.appendChild(circ);
@@ -73,7 +85,7 @@ const search = function(req) {
         }
     }).catch(error => console.error("element not found", error));
    
-
+    fullHeight();
 }
 
 
