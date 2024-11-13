@@ -8,18 +8,20 @@ document.addEventListener('DOMContentLoaded', ()=>{
 });
 
 
-async function fullHeight() {
-    let documentHeight = await document.body.scrollHeight;
-    let DHeight = document.getElementById('D');
-    console.log(documentHeight);
-    if(await DHeight) {
-    document.body.style.height = documentHeight + 'px';
-    DHeight.style.height = (documentHeight*0.90) + 'px';
+  function fullHeight() {
+
+    let vh = window.innerHeight + window.outerHeight;
+   try { 
+    document.body.style.height =  `${vh}px`;
+    document.getElementById('D').style.height = `${vh}px`;
+    console.log(vh);
+ }
+ catch(e) {
+    console.error("height not found:", e);
+ }
+
 }
-else {
-console.error("DHeight Error");
-}
-}
+
 
 
 fullHeight();
@@ -86,6 +88,7 @@ const search = function(req) {
     }).catch(error => console.error("element not found", error));
    
     fullHeight();
+
 }
 
 

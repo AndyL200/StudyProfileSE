@@ -73,14 +73,29 @@ body {
     position:sticky;
 }
 
+/* 
+body figure {
+    display:flex;
+    margin: 0;
+    padding: 0;
+    border: black solid 3px;
+    width:90%;
+    height:90%;
+} */
 
 body .D-block {
     margin: auto 0;
-    display:block;
+    padding:0;
     float:left;
     background-color:lightblue;
-    min-width:10%;
+    overflow:visible;
     z-index:4;
+    min-width:15%;
+    min-height: 100%;
+}
+
+body figure .D-block::before {
+    
 }
 
 
@@ -94,6 +109,7 @@ outline-style: none;
 display:flex;
 flex-direction: column;
 justify-content:space-between;
+transition: 2s;
 }
 
 #output > div {
@@ -137,4 +153,4 @@ hr {
     margin:0;
     padding:0;
 
-}
+} 
