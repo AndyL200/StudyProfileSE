@@ -9,12 +9,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 
   function fullHeight() {
-
-    let vh = window.innerHeight + window.outerHeight;
+    let h = window.innerHeight;
    try { 
-    document.body.style.height =  `${vh}px`;
-    document.getElementById('D').style.height = `${vh}px`;
-    console.log(vh);
+    document.body.style.height =  `${h}px`;
+    console.log(h);
  }
  catch(e) {
     console.error("height not found:", e);
@@ -26,7 +24,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 fullHeight();
 
-
+function toNext() {
+    document.open("page1.html");
+}
 
 
 const clsAlert = function() {
@@ -51,7 +51,11 @@ const search = function(req) {
     fetch("db.json").then(response => response.json()).then(data => {
         let n = 0;
         console.log(req);
+        req = req.toUpperCase();
+
         for(i = 0; i < data.length;i++) {
+            data[i].name = data[i].name.toUpperCase();
+
             if(req[n] == data[i].name[n]) {
                 n+=1;
                 i--;
@@ -69,12 +73,13 @@ const search = function(req) {
                 // console.log(data[i].name[max]);
 
             if(req[max] == data[i].name[max] || req.length == 0) {
-            console.log(data[i].name[n]);
+            // console.log(data[i].name[n]);
             let contain = document.createElement('div');
             let curr = document.createElement("a");
             contain.id = "block" + i;
             contain.className = "studentOutput";
             curr.href="page1.html";
+            contain.onclick = toNext;
  
             let circ = document.createElement('div');
             circ.className = "circle";
