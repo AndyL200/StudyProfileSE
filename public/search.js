@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 fullHeight();
 
 function toNext() {
-    document.open("page1.html");
+    window.loacation.assign("page1.html");
 }
 
 
@@ -56,13 +56,9 @@ const search = function(req) {
         for(i = 0; i < data.length;i++) {
             data[i].name = data[i].name.toUpperCase();
 
-            if(req[n] == data[i].name[n]) {
-                n+=1;
-                i--;
+            while(req[n] == data[i].name[n] && n < data[i].name.length) {
+                n = n + 1;
                 if(n>max) {max = n-1;}
-            }
-            else {
-                n = 0;
             }
         }
         // console.log(max);
@@ -71,8 +67,13 @@ const search = function(req) {
             for(i = 0; i < data.length;i++) {
                 // console.log(req[max]);
                 // console.log(data[i].name[max]);
-
-            if(req[max] == data[i].name[max] || req.length == 0) {
+                same = true;
+                for(j = 0; j < max; j++) {
+                    if(req[j] != data[i].name[j]) {
+                        same = false;
+                    }
+                }
+            if(same || req.length == 0) {
             // console.log(data[i].name[n]);
             let contain = document.createElement('div');
             let curr = document.createElement("a");
