@@ -1,51 +1,54 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <meta charset = 'utf-8'>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Find Students</title>
-        <link href = "stickfav.jpeg" rel = "icon">
-        <link href = "index.css" rel = "stylesheet">
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"> 
-        <script src = "search.js"></script>
-        <script src = "webChange.js"></script>
-        <script>
-            //maybe use a listener instead
-          function foo() {
+
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Find Students</title>
+    <link href="stickfav.jpeg" rel="icon">
+    <link href="index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script src="search.js"></script>
+    <script>
+        //maybe use a listener instead
+        function foo() {
             document.getElementById("searchIcon").style.display = "none";
-          }
-        </script>
-    </head>
-    <body>
-        <!-- <div id = "overlay">
+        }
+    </script>
+</head>
+
+<body>
+    <!-- <div id = "overlay">
         <div id = "customPopup">
           <p>Custom popup</p>  
           <button id = "closeCust" onclick = "clsAlert()" class = "closePopup">Close</button>
         </div>
     </div> -->
-    <div class = 'topSearch'>
-        <div class = "inputContainer">
-        <svg id = "searchIcon" height = "20" width = "20">
-            <circle r = "5" cx = "10" cy = "10"  stroke-width = "2" fill = "none" stroke = "black"/>
-            <line x1 = "15" x2 = "20" y1 = "15" y2 = "20" style="stroke:red;stroke-width:2"/>
-        </svg>
-        <input onclick = foo() id = "searchSub" name = "searchSubmission" class = "searchSub">
+    <div class='topSearch'>
+        <div class="inputContainer">
+            <svg id="searchIcon" height="20" width="20">
+                <circle r="5" cx="10" cy="10" stroke-width="2" fill="none" stroke="black" />
+                <line x1="15" x2="20" y1="15" y2="20" style="stroke:red;stroke-width:2" />
+            </svg>
+            <input onclick=foo() id="searchSub" name="searchSubmission" class="searchSub">
         </div>
-        </div>
+    </div>
 
 
-    <div class = "content">
-        <div class = "D-block" id = "D"></div>
+    <div class="content">
+        <div class="D-block" id="D"></div>
 
 
 
-        <div id = "output" name = "res">
-
+        <div id="output" name="res">
         </div>
 
     </div>
-    <hr id = "footLine">
-    </body>
+    <hr id="footLine">
+</body>
+
 </html>
